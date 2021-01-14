@@ -34,7 +34,7 @@ test-all:
 test: bootstrap
 	$(XCODEBUILD) test $(BUILD_FLAGS) $(XCPRETTY)
 
-test-with-log:
+test-with-log: bootstrap
 	$(XCODEBUILD) test $(BUILD_FLAGS)
 
 clean:
