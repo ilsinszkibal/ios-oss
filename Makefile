@@ -31,6 +31,9 @@ test-all:
 	PLATFORM=iOS "$(MAKE)" test
 	PLATFORM=iOS TARGET=Library "$(MAKE)" test
 
+build-for-testing-after-bootstrap:
+	$(XCODEBUILD) $(BUILD_FLAGS) build-for-testing
+
 build-for-testing: bootstrap
 	$(XCODEBUILD) $(BUILD_FLAGS) build-for-testing
 
